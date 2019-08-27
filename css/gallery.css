@@ -1,0 +1,242 @@
+#portfolio > #myWorks {
+display: inline-block;
+padding: 30px 0 0 0;
+}
+/*---------------------F I L T R A S---------------------*/
+    #portfolio > #myWorks > .filter {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+        #portfolio > #myWorks > .filter > div {
+            display: inline-block;
+            margin: 0 5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            padding: 0 20px;
+            font-size: 20px;
+            font-weight: bolder;
+            color: var(--blackText-color);
+            border-radius: 8px;
+            box-shadow: -1px 1px 4px 0px grey;
+            transition: all 0.6s ease;
+        }
+        #portfolio > #myWorks > .filter > div:hover{
+            cursor: pointer;
+            border-radius: 15px;
+            box-shadow: -3px 3px 8px 0px grey;
+        }
+        #portfolio > #myWorks > .filter .active {
+            background-color: var(--main-color);
+        }
+/*---------------------D A R B A I---------------------*/
+    #portfolio > #myWorks > .works {
+        /* display: flex; */
+        width: 100%;
+    }
+        #portfolio > #myWorks > .works > .work{
+            /* display: inline-block; */
+            position: relative;
+            float: left;
+            width: 32%;
+            margin: 0.5%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            border-radius: 4px;
+            border: 1px sold black;
+        }
+        #portfolio > #myWorks > .works > .work::after{
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+            border: 1px sold black;
+        }
+            #portfolio > #myWorks > .works > .work:hover img{
+                transform: scale(1.1);
+                filter: brightness(45%);
+            }
+            #portfolio > #myWorks > .works > .work:hover .texts{
+                opacity: 1;
+            }
+            #portfolio > #myWorks > .works > .work > img{
+                display: inline-block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                padding: 0%;
+                opacity: 1;
+                border-radius: 0px;
+                left: 0%;
+                background-position: center;
+                background-size: cover;
+                transform: scale(1);
+                filter: brightness(100%);
+                transition: all 0.8s ease;
+            }
+            #portfolio > #myWorks > .works > .work > .texts{
+                display: inline-block;
+                position: absolute;
+                text-align: left;
+                text-transform:capitalize;
+                bottom: 13%;
+                left: 10%;
+                z-index: 9;
+                opacity: 0;
+                transition: all 0.8s ease;
+            }
+                #portfolio > #myWorks > .works > .work > .texts > h3{
+                    display: inline-block;
+                    width: 100%;
+                    color: var(--lighterText-color);
+                    font-weight: bolder;
+                    font-size: 25px;
+                    line-height: 0px;
+                }
+                #portfolio > #myWorks > .works > .work > .texts > p{
+                    display: inline-block;
+                    width: 100%;
+                    color: var(--main-color);
+                    font-weight: bolder;
+                    font-size: 20px;
+                    line-height: 0px;
+                }
+        .work.hide{
+            display:none;
+        }
+        .work.show{
+            display:inline-block;
+        }
+/*---------------------R O D Y K L Ė S---------------------*/
+    #portfolio > #myWorks > .arrows_box{
+        display: inline-block;
+        width: 100%;
+    }
+    #portfolio > #myWorks > .arrows_box > .arrows{
+        display: inline-block;
+        margin: 20px auto;
+    }
+        #portfolio > #myWorks > .arrows_box > .arrows > .more{
+            display: inline-block;
+            float: left;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            line-height: 28px;
+            border: 1px solid var(--main-color);
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--blackText-color);
+        }
+            #portfolio > #myWorks > .arrows_box > .arrows > .more:hover{
+                box-shadow: 0 0 8px var(--shadow-color);
+            }
+            #portfolio > #myWorks > .arrows_box > .arrows > .more:first-child{
+                border-radius: 25px 0px 0px 25px;
+            }
+            #portfolio > #myWorks > .arrows_box > .arrows > .more:last-child{
+                border-radius: 0px 25px 25px 0px;
+            }
+            #portfolio > #myWorks > .arrows_box > .arrows > .more+.more{
+                margin-left: 5px;
+            }
+            #portfolio > #myWorks > .arrows_box > .arrows > .more.active {
+                background-color: var(--main-color);
+            }
+
+            /* R E S P O N S I V E   D E S I G N */
+
+            #portfolio > #myWorks > .list > .work{
+                width: 32%;
+            }
+            
+            #portfolio > #myWorks > .list > .N{
+                display: none;
+            }
+            #portfolio > #myWorks > .list > .S,
+            #portfolio > #myWorks > .list > .M,
+            #portfolio > #myWorks > .list > .L{
+                display: inline-block;
+            }
+            #portfolio > #myWorks > .list > .M.L.N{
+                margin: 0 2%;
+            }
+            #portfolio > #myWorks > .list > .S.M.L.N,
+            #portfolio > #myWorks > .list > .L.N{
+                margin: 0;
+            }
+
+@media ( max-width: 1300px ) {
+}
+
+@media ( max-width: 1000px ) {
+    #portfolio > #myWorks > .list > .work{
+        width: 49%;
+    }
+    #portfolio > #myWorks > .list > .L,
+    #portfolio > #myWorks > .list > .N{
+        display: none;
+    }
+    #portfolio > #myWorks > .list > S.M.L.N,
+    #portfolio > #myWorks > .list > .M.L.N{
+        display: inline-block;
+    }
+    #portfolio > #myWorks > .list > .S.M.L.N{
+        margin-right: 2%;
+    }
+    #portfolio > #myWorks > .list > .M.L.N{
+        margin-left: 2%;
+    }
+    #portfolio > #myWorks > .list > .M.L.N,
+    #portfolio > #myWorks > .list > .L.N{
+        margin: 0;
+    }
+}
+
+@media ( max-width: 700px ) {
+    #portfolio > #myWorks > .filter > div {
+        margin:5px;
+    }
+}
+
+
+@media ( max-width: 600px ) {
+    #portfolio > #myWorks > .list > .work{
+        width: 100%
+    }
+    #portfolio > #myWorks > .list > .M.L.N,
+    #portfolio > #myWorks > .list > .L.N,
+    #portfolio > #myWorks > .list > .N{
+        display: none;
+    }
+    #portfolio > #myWorks > .list > .S.M.L.N{
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+@media ( max-width: 500px ) {
+    
+}
+@media ( max-width: 400px ) {
+}
+@media ( max-width: 384px ) {
+    div#portfolio.container{
+        padding: 20px 0;
+    }
+    #portfolio > #myWorks {
+        padding: 15px 0 0 0;
+        }
+            /* #portfolio > #myWorks > .filter {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                margin: 0 0 30px 0;
+            } */
+                
+}
+@media ( max-width: 320px ) {
+}
